@@ -21,3 +21,9 @@ RUN apk add --update wget ca-certificates && \
     ln -s /usr/lib/jvm/default-jvm/bin/javac /usr/bin/javac && \
     apk del wget ca-certificates && \
     rm /tmp/* /var/cache/apk/*
+
+# Alpine Linux doesn't use pam, which means that there is no /etc/nsswitch.conf,
+# but Java relies on /etc/nsswitch.conf to check the order of DNS resolving
+# (i.e. check /etc/hosts first and then lookup DNS-servers).
+# To fix this we just create /etc/nsswitch.conf and add the following line:
+RUN echo 'hosts: files mdns4_minimal [NOTFOUND=return] dns mdns4' >> /etc/nsswitch.conf
