@@ -44,19 +44,5 @@ RUN apk add --update wget ca-certificates && \
            $JAVA_HOME/jre/lib/amd64/libgstreamer-lite.so \
            $JAVA_HOME/jre/lib/amd64/libjavafx*.so \
            $JAVA_HOME/jre/lib/amd64/libjfx*.so && \
-    rm -rf $JAVA_HOME/jre/bin/jjs \
-           $JAVA_HOME/jre/bin/keytool \
-           $JAVA_HOME/jre/bin/orbd \
-           $JAVA_HOME/jre/bin/pack200 \
-           $JAVA_HOME/jre/bin/policytool \
-           $JAVA_HOME/jre/bin/rmid \
-           $JAVA_HOME/jre/bin/rmiregistry \
-           $JAVA_HOME/jre/bin/servertool \
-           $JAVA_HOME/jre/bin/tnameserv \
-           $JAVA_HOME/jre/bin/unpack200 \
-           $JAVA_HOME/jre/lib/ext/nashorn.jar \
-           $JAVA_HOME/jre/lib/jfr.jar \
-           $JAVA_HOME/jre/lib/jfr \
-           $JAVA_HOME/jre/lib/oblique-fonts && \
     apk del wget ca-certificates && \
     rm /tmp/* /var/cache/apk/*
