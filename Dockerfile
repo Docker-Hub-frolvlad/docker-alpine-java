@@ -1,7 +1,7 @@
 FROM alpine:3.2
 
 ENV JAVA_VERSION=8 \
-    JAVA_UPDATE=65 \
+    JAVA_UPDATE=66 \
     JAVA_BUILD=17 \
     JAVA_HOME=/usr/lib/jvm/default-jvm
 
