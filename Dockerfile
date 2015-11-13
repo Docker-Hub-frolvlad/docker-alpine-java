@@ -13,8 +13,7 @@ RUN apk add --update wget ca-certificates && \
     mkdir -p /usr/lib/jvm && \
     mv "/tmp/jdk1.${JAVA_VERSION}.0_${JAVA_UPDATE}" "/usr/lib/jvm/java-${JAVA_VERSION}-oracle" && \
     ln -s "java-${JAVA_VERSION}-oracle" $JAVA_HOME && \
-    ln -s $JAVA_HOME/bin/java /usr/bin/java && \
-    ln -s $JAVA_HOME/bin/javac /usr/bin/javac && \
+    ln -s "$JAVA_HOME/bin/"* /usr/bin/ && \
     rm -rf $JAVA_HOME/*src.zip && \
     apk del wget ca-certificates && \
     rm /tmp/* /var/cache/apk/*
