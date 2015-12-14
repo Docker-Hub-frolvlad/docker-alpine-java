@@ -5,7 +5,7 @@ ENV JAVA_VERSION=8 \
     JAVA_BUILD=17 \
     JAVA_HOME=/usr/lib/jvm/default-jvm
 
-RUN apk add --update wget ca-certificates && \
+RUN apk add --update --virtual build-dependencies wget ca-certificates && \
     cd /tmp && \
     wget --header "Cookie: oraclelicense=accept-securebackup-cookie;" \
         "http://download.oracle.com/otn-pub/java/jdk/${JAVA_VERSION}u${JAVA_UPDATE}-b${JAVA_BUILD}/jdk-${JAVA_VERSION}u${JAVA_UPDATE}-linux-x64.tar.gz" && \
@@ -15,5 +15,5 @@ RUN apk add --update wget ca-certificates && \
     ln -s "java-${JAVA_VERSION}-oracle" "$JAVA_HOME" && \
     ln -s "$JAVA_HOME/bin/"* "/usr/bin/" && \
     rm -rf "$JAVA_HOME/"*src.zip && \
-    apk del wget ca-certificates && \
+    apk del build-dependencies && \
     rm /tmp/* /var/cache/apk/*
