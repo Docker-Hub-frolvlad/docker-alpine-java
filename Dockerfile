@@ -1,11 +1,11 @@
-FROM frolvlad/alpine-glibc:3.2
+FROM frolvlad/alpine-glibc:alpine-3.3
 
 ENV JAVA_VERSION=8 \
     JAVA_UPDATE=66 \
     JAVA_BUILD=17 \
     JAVA_HOME="/usr/lib/jvm/default-jvm"
 
-RUN apk add --update --virtual=build-dependencies wget ca-certificates && \
+RUN apk add --no-cache --virtual=build-dependencies wget ca-certificates && \
     cd "/tmp" && \
     wget --header "Cookie: oraclelicense=accept-securebackup-cookie;" \
         "http://download.oracle.com/otn-pub/java/jdk/${JAVA_VERSION}u${JAVA_UPDATE}-b${JAVA_BUILD}/jdk-${JAVA_VERSION}u${JAVA_UPDATE}-linux-x64.tar.gz" && \
@@ -35,4 +35,4 @@ RUN apk add --update --virtual=build-dependencies wget ca-certificates && \
            "$JAVA_HOME/jre/lib/amd64/"libjavafx*.so \
            "$JAVA_HOME/jre/lib/amd64/"libjfx*.so && \
     apk del build-dependencies && \
-    rm "/tmp/"* "/var/cache/apk/"*
+    rm "/tmp/"*
