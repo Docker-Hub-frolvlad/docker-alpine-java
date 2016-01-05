@@ -1,3 +1,7 @@
+[![Docker Stars](https://img.shields.io/docker/stars/frolvlad/alpine-oraclejdk8.svg?style=flat-square)](https://hub.docker.com/r/frolvlad/alpine-oraclejdk8/)
+[![Docker Pulls](https://img.shields.io/docker/pulls/frolvlad/alpine-oraclejdk8.svg?style=flat-square)](https://hub.docker.com/r/frolvlad/alpine-oraclejdk8/)
+
+
 OracleJDK 8 Docker image
 ========================
 
