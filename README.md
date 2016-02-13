@@ -30,8 +30,8 @@ Usage Example
 -------------
 
 ```bash
-$ echo -e 'public class Main { public static void main(String[] args) { System.out.println("Hello World"); } }' > Main.java
-$ docker run --rm -v `pwd`:/tmp --workdir /tmp frolvlad/alpine-oraclejdk8 sh -c 'javac Main.java && java Main'
+$ echo 'public class Main { public static void main(String[] args) { System.out.println("Hello World"); } }' > Main.java
+$ docker run --rm -v "$(pwd)":/mnt --workdir /mnt frolvlad/alpine-oraclejdk8:slim sh -c "javac Main.java && java Main"
 ```
 
 Once you have run this command you will get printed 'Hello World' from Java!
