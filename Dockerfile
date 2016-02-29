@@ -1,8 +1,8 @@
 FROM frolvlad/alpine-glibc:alpine-3.3_glibc-2.23
 
 ENV JAVA_VERSION=8 \
-    JAVA_UPDATE=72 \
-    JAVA_BUILD=15 \
+    JAVA_UPDATE=74 \
+    JAVA_BUILD=02 \
     JAVA_HOME="/usr/lib/jvm/default-jvm"
 
 RUN apk add --no-cache --virtual=build-dependencies wget ca-certificates && \
