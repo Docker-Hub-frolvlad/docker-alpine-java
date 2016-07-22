@@ -1,7 +1,7 @@
 FROM frolvlad/alpine-glibc:alpine-3.4
 
 ENV JAVA_VERSION=8 \
-    JAVA_UPDATE=92 \
+    JAVA_UPDATE=102 \
     JAVA_BUILD=14 \
     JAVA_HOME="/usr/lib/jvm/default-jvm"
 
