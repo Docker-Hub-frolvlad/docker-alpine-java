@@ -9,17 +9,17 @@ tags: `full` (only src tarballs get removed), `cleaned` (desktop parts get clean
 (everything but compiler and jvm is removed). `master` branch refers to `slim` tag, but `latest`
 tag points to `cleaned`.
 
-`slim` (`master` branch) image size is:
+`slim` (`master` branch) download image size is:
 
-[![](https://badge.imagelayers.io/frolvlad/alpine-oraclejdk8:slim.svg)](https://imagelayers.io/?images=frolvlad/alpine-oraclejdk8:slim 'Get your own badge on imagelayers.io')
+[![](https://images.microbadger.com/badges/image/frolvlad/alpine-oraclejdk8:slim.svg)](http://microbadger.com/images/frolvlad/alpine-oraclejdk8:slim "Get your own image badge on microbadger.com")
 
-`cleaned` (`latest` tag) image size is:
+`cleaned` (`latest` tag) download image size is:
 
-[![](https://badge.imagelayers.io/frolvlad/alpine-oraclejdk8:cleaned.svg)](https://imagelayers.io/?images=frolvlad/alpine-oraclejdk8:cleaned 'Get your own badge on imagelayers.io')
+[![](https://images.microbadger.com/badges/image/frolvlad/alpine-oraclejdk8:cleaned.svg)](http://microbadger.com/images/frolvlad/alpine-oraclejdk8:cleaned "Get your own image badge on microbadger.com")
 
-`full` image size is:
+`full` download image size is:
 
-[![](https://badge.imagelayers.io/frolvlad/alpine-oraclejdk8:full.svg)](https://imagelayers.io/?images=frolvlad/alpine-oraclejdk8:full 'Get your own badge on imagelayers.io')
+[![](https://images.microbadger.com/badges/image/frolvlad/alpine-oraclejdk8:full.svg)](http://microbadger.com/images/frolvlad/alpine-oraclejdk8:full "Get your own image badge on microbadger.com")
 
 
 Consider using `develar/java` image (~120MB) if you only need JRE (you can run
