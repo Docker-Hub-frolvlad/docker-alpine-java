@@ -30,8 +30,8 @@ tag points to `cleaned`.
 [![](https://images.microbadger.com/badges/image/frolvlad/alpine-oraclejdk8:full.svg)](http://microbadger.com/images/frolvlad/alpine-oraclejdk8:full "Get your own image badge on microbadger.com")
 
 
-Consider using `develar/java` image (~120MB) if you only need JRE (you can run
-java applications, but cannot build/compile them).
+Consider using [`frolvlad/alpine-oraclejre8`](https://github.com/frol/docker-alpine-oraclejre8)
+image (~119MB) if you only need JRE (you can run Java applications, but cannot build/compile them).
 
 
 Usage Example
