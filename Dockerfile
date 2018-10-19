@@ -1,9 +1,9 @@
 FROM frolvlad/alpine-glibc:alpine-3.8
 
 ENV JAVA_VERSION=8 \
-    JAVA_UPDATE=181 \
-    JAVA_BUILD=13 \
-    JAVA_PATH=96a7b8442fe848ef90c96a2fad6ed6d1 \
+    JAVA_UPDATE=192 \
+    JAVA_BUILD=12 \
+    JAVA_PATH=750e1c8617c5452694857ad95c3ee230 \
     JAVA_HOME="/usr/lib/jvm/default-jvm"
 
 RUN apk add --no-cache --virtual=build-dependencies wget ca-certificates unzip && \
@@ -40,4 +40,9 @@ RUN apk add --no-cache --virtual=build-dependencies wget ca-certificates unzip &
     unzip -jo -d "${JAVA_HOME}/jre/lib/security" "jce_policy-${JAVA_VERSION}.zip" && \
     rm "${JAVA_HOME}/jre/lib/security/README.txt" && \
     apk del build-dependencies && \
-    rm "/tmp/"*
+    rm "/tmp/"* && \
+    \
+    echo 'public class Main { public static void main(String[] args) { System.out.println("Java code is running fine!"); } }' > Main.java && \
+    javac Main.java && \
+    java Main && \
+    rm -r "/tmp/"*
