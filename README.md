@@ -38,8 +38,10 @@ Usage Example
 -------------
 
 ```bash
-$ echo 'public class Main { public static void main(String[] args) { System.out.println("Hello World"); } }' > Main.java
-$ docker run --rm -v "$(pwd)":/mnt --workdir /mnt frolvlad/alpine-oraclejdk8:slim sh -c "javac Main.java && java Main"
+src='class Main{public static void main(String[]args){System.out.println("Hello, World");}}'
+command="javac Main.java && java Main"
+echo "$src" > Main.java
+docker run --rm -v "$(pwd)":/mnt --workdir /mnt frolvlad/alpine-oraclejdk8:slim sh -c "$command"
 ```
 
 Once you have run this command you will get printed 'Hello World' from Java!
