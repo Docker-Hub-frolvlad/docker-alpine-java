@@ -9,9 +9,43 @@ This image is based on Alpine Linux image, which is only a 5MB image, and contai
 Java runtime (JRE) and Java development kit (JDK) conveniently packaged into
 separate Docker tags.
 
-You must accept the
-[Oracle Binary Code License Agreement for Java SE](http://www.oracle.com/technetwork/java/javase/terms/license/index.html)
-to use this image (see [issue #6](https://github.com/frol/docker-alpine-java/issues/6) for details).
+DEPRECATION DUE TO ORACLE JAVA LICENSING CHANGE
+-----------------------------------------------
+
+> Thank you to everyone using images derived from this repo, to everyone who
+> inspired and contributed.  After April 2019, due to Oracle Java licensing
+> changes, this repo is deprecated, and is now for reference only.  No new
+> builds will be published to `frolvlad/alpine-java` repo on Docker Hub from
+> this Github repo.
+
+As announced, Java licensing changed, and starting April 2019 commercial usage
+of Oracle Java required subscription.  In other words, switch to OpenJDK, or use
+older versions of Oracle Java (for reference, pre-built images are available on
+[Docker Hub](https://hub.docker.com/r/frolvlad/alpine-java/))
+
+Official OpenJDK images receive regular updates, and are available at
+https://hub.docker.com/_/openjdk, including `8-jre-alpine` (85MB),
+`8-jdk-alpine` (105MB), `8-jre-slim` (204MB), `8-jdk-slim` (243MB),
+`8u212-jre-slim` (204MB), `8u212-jdk-slim` (243MB), etc..
+
+For more details about Oracle Java Licensing, checkout this article:
+https://medium.com/@javachampions/java-is-still-free-2-0-0-6b9aa8d6d244
+
+TL;DR
+
+> Oracle JDK 8 is going through the “End of Public Updates” process, which means
+> the April 2019 update will restrict commercial use. However, since Java SE 9,
+> Oracle is also providing Oracle OpenJDK builds which are free for commercial
+> use (but only updated for 6 months). There are also free OpenJDK builds which
+> will be updated (including security patches) from other providers like
+> AdoptOpenJDK, Amazon, Azul, BellSoft, IBM, jClarity, Red Hat, the Linux
+> distros et al.
+
+And many others talking about Oracle Java SE licensing changes ([Google
+search](https://www.google.com/search?q=java+oracle+license))
+
+Tags
+----
 
 JDK bundle contains lots of unnecessary for Docker image stuff, so it was cleaned up. There are 3
 tags: `*-full` (only src tarballs get removed), `*-cleaned` (desktop parts get cleaned), `*-slim`
